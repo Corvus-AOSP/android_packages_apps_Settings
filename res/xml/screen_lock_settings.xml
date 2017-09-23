@@ -22,6 +22,14 @@
     android:title="@string/unlock_set_unlock_launch_picker_title"
     settings:searchable="false">
 
+    <!-- available in pin/pattern/password -->
+    <com.android.settings.display.TimeoutListPreference
+        android:key="lock_after_timeout"
+        android:title="@string/lock_after_timeout"
+        android:summary="@string/summary_placeholder"
+        android:entries="@array/lock_after_timeout_entries"
+        android:entryValues="@array/lock_after_timeout_values" />
+
     <!-- available in pattern -->
     <SwitchPreference
         android:key="visiblepattern"
@@ -48,14 +56,6 @@
         android:title="@string/lockpattern_settings_enable_dots_title"/>
 
     <!-- available in pin/pattern/password -->
-    <com.android.settings.display.TimeoutListPreference
-        android:key="lock_after_timeout"
-        android:title="@string/lock_after_timeout"
-        android:summary="@string/summary_placeholder"
-        android:entries="@array/lock_after_timeout_entries"
-        android:entryValues="@array/lock_after_timeout_values" />
-
-    <!-- available in pin/pattern/password -->
     <SwitchPreference
         android:key="power_button_instantly_locks"
         android:title="@string/lockpattern_settings_enable_power_button_instantly_locks" />
@@ -66,5 +66,11 @@
         android:title="@string/fingerprint_wake_unlock_title"
         android:summaryOn="@string/fingerprint_wake_unlock_touch"
         android:summaryOff="@string/fingerprint_wake_unlock_press" />
+
+    <SwitchPreference
+        android:key="fingerprint_vibration"
+        android:title="@string/fprint_vib_title"
+        android:summary="@string/fprint_vib_summary"
+        android:persistent="true" />
 
 </PreferenceScreen>
