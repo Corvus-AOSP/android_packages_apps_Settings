@@ -143,6 +143,12 @@
         android:entries="@array/status_bar_weather_entries"
         android:entryValues="@array/status_bar_weather_values" />
 
+    <Preference
+        android:key="omnijaws_settings"
+        android:title="@string/lockscreen_weather_settings_title"
+        android:summary="@string/lockscreen_weather_settings_summary"
+        android:fragment="com.android.settings.corvus.fragments" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
