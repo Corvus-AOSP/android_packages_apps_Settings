@@ -847,4 +847,18 @@
     <!-- Data usage info in QS footer -->
     <string name="qs_data_usage_title">Show detailed data usage</string>
     <string name="qs_data_usage_summary">Displays total data usage for Wifi and Cellular network with upload and download data</string>
+
+    <!-- QS Extras -->
+    <string name="qs_extras">Quick Settings Extras</string>
+
+    <!-- QS Weather Options -->
+    <string name="statusbar_weather_title">Status bar weather</string>
+    <string name="statusbar_weather_summary">Configure from QS settings/Weather</string>
+    <string name="statusbar_weather_dialog_title">Status bar weather style</string>
+    <string name="status_bar_weather_hidden">Hide weather</string>
+    <string name="status_bar_temperature_image_show_scale">Show temp with scale and image</string>
+    <string name="status_bar_temperature_image_hide_scale">Show temp with image without scale</string>
+    <string name="status_bar_temperature_show_scale_hide_image">Show temp with scale</string>
+    <string name="status_bar_temperature_hide_scale_hide_image">Show temp without scale</string>
+    <string name="status_bar_show_image">Show image</string>
 </resources>
