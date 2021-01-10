@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2019-2022 The Evolution X Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,6 +20,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.provider.SearchIndexableResource;
 
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.dashboard.suggestions.SuggestionFeatureProvider;
@@ -27,15 +29,13 @@ import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-
 import java.util.Arrays;
 import java.util.List;
 
 @SearchIndexable
-public class SwipeToScreenshotGestureSettings extends DashboardFragment {
+public class DoubleTapAmbientSettings extends DashboardFragment {
 
-     private static final String TAG = "SwipeToScreenshotGestureSettings";
+    private static final String TAG = "DoubleTapAmbientSettings";
 
     @Override
     public void onAttach(Context context) {
@@ -54,7 +54,7 @@ public class SwipeToScreenshotGestureSettings extends DashboardFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.swipe_to_screenshot_gesture_settings;
+        return R.xml.double_tap_ambient_screen_settings;
     }
 
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
@@ -63,7 +63,7 @@ public class SwipeToScreenshotGestureSettings extends DashboardFragment {
                 public List<SearchIndexableResource> getXmlResourcesToIndex(
                         Context context, boolean enabled) {
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.swipe_to_screenshot_gesture_settings;
+                    sir.xmlResId = R.xml.double_tap_ambient_screen_settings;
                     return Arrays.asList(sir);
                 }
             };
