@@ -505,15 +505,9 @@ public class AppInfoDashboardFragment extends DashboardFragment
         return true;
     }
 
-    private void openPlayStore(String packageName) {
-        // Launch an intent to the play store entry
-        String playURL = "https://play.google.com/store/apps/details?id=" + packageName;
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(playURL));
-        startActivity(i);
-    }
-     private boolean isAospOrStore(String packageName) {
-        return packageName.contains("com.android");
+    @Override
+    protected boolean shouldSkipForInitialSUW() {
+        return true;
     }
 
     private void uninstallPkg(String packageName, boolean allUsers, boolean andDisable) {
