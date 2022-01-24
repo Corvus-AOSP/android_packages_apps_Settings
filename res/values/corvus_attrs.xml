@@ -24,4 +24,7 @@
     </declare-styleable>
 
     <attr name="customPreferenceStyle" format="reference" />
+
+    <attr name="secureValue" format="string" />
+
 </resources>
