@@ -126,4 +126,10 @@
 
     </PreferenceCategory>
 
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:key="qs_data_usage_panel"
+        android:title="@string/qs_data_usage_title"
+        android:summary="@string/qs_data_usage_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
