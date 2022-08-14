@@ -120,24 +120,16 @@ public class QuickSettings extends SettingsPreferenceFragment
     private void updateQsStyle() {
         ContentResolver resolver = getActivity().getContentResolver();
 
-        boolean qsStock = Settings.System.getIntForUser(getContext().getContentResolver(),
-                Settings.System.QS_PANEL_STYLE , 0, UserHandle.USER_CURRENT) == 0;
-        boolean qsRoundedRectangle = Settings.System.getIntForUser(getContext().getContentResolver(),
-                Settings.System.QS_PANEL_STYLE , 0, UserHandle.USER_CURRENT) == 1;
-        boolean qsOutline = Settings.System.getIntForUser(getContext().getContentResolver(),
-                Settings.System.QS_PANEL_STYLE , 0, UserHandle.USER_CURRENT) == 2;
-        boolean qsTwoTone = Settings.System.getIntForUser(getContext().getContentResolver(),
-                Settings.System.QS_PANEL_STYLE , 0, UserHandle.USER_CURRENT) == 3;
-        boolean qsColorPop = Settings.System.getIntForUser(getContext().getContentResolver(),
-                Settings.System.QS_PANEL_STYLE , 0, UserHandle.USER_CURRENT) == 4;
+        int qsPanelStyle = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.QS_PANEL_STYLE , 0, UserHandle.USER_CURRENT);
 
-        if (qsStock) {
+        if (qsPanelStyle == 0) {
             setDefaultStyle(mOverlayService);
-        } else if (qsRoundedRectangle) {
+        } else if (qsPanelStyle == 1) {
             setQsStyle(mOverlayService, "com.android.system.qs.roundedrectangle");
-        } else if (qsOutline) {
+        } else if (qsPanelStyle == 2) {
             setQsStyle(mOverlayService, "com.android.system.qs.outline");
-        } else if (qsTwoTone || qsColorPop) {
+        } else if (qsPanelStyle == 3 || qsPanelStyle == 4) {
             setQsStyle(mOverlayService, "com.android.system.qs.twotoneaccent");
         }
     }
