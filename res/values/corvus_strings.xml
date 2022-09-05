@@ -890,4 +890,16 @@
     <!-- Custom brightness slider -->
     <string name="custom_brightness_slider_title">Show brightness slider in volume panel</string>
     <string name="custom_brightness_slider_summary">Toggles an animated brightness slider view within volume panel</string>
+
+    <!-- Settings dashboard icon style -->
+    <string name="dashboard_icon_styles_title">Dashboard icon styles</string>
+    <string name="dashboard_icon_default">Default</string>
+    <string name="dashboard_icon_background">Icon with background</string>
+    <string name="dashboard_icon_background_dark">Icon with dark background</string>
+    <string name="dashboard_icon_accent_background">Icon with accented background</string>
+    <string name="dashboard_icon_accent_twotone">Icon with accent translucent background</string>
+    <string name="dashboard_icon_colorful">Colorful icon only</string>
+    <string name="dashboard_icon_colorful_twotone">Colorful icon translucent</string>
+    <string name="dashboard_icon_colorful_darkbg">Colorful icon with dark background</string>
+    <string name="dashboard_icon_colorful_bg">Colorful icon background</string>
 </resources>

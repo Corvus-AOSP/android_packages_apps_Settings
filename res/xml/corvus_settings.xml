@@ -21,49 +21,49 @@
     <Preference
         android:key="game_settings"
         android:title="@string/game_space_title"
-        android:icon="@drawable/ic_raven_gaming"
+        android:icon="@drawable/ic_dashboard_gamespace"
         android:summary="@string/game_space_summary"
         settings:controller="com.android.settings.applications.GameSettingsPreferenceController" />
 
     <Preference
         android:fragment="com.android.settings.corvus.fragments.Theming"
         android:key="theming_fragment"
-        android:icon="@drawable/ic_raven_themes"
+        android:icon="@drawable/ic_dashboard_theming"
         android:title="@string/raven_themes_title"
         android:summary="@string/raven_themes_summary"/>
 
     <Preference
         android:fragment="com.android.settings.corvus.fragments.Statusbar"
         android:key="statusbar_fragment"
-        android:icon="@drawable/ic_raven_statusbar"
+        android:icon="@drawable/ic_dashboard_statusbar"
         android:title="@string/raven_statusbar_title"
         android:summary="@string/raven_statusbar_summary"/>
 
     <Preference
         android:fragment="com.android.settings.corvus.fragments.QuickSettings"
         android:key="qs_fragment"
-        android:icon="@drawable/ic_raven_quicksettings"
+        android:icon="@drawable/ic_dashboard_raven"
         android:title="@string/raven_quicksettings_title"
         android:summary="@string/raven_quicksettings_summary"/>
 
     <Preference
         android:fragment="com.android.settings.corvus.fragments.Lockscreen"
         android:key="lockscreen_fragment"
-        android:icon="@drawable/ic_raven_lockscreen"
+        android:icon="@drawable/ic_dashboard_lockscreen"
         android:title="@string/raven_lockscreen_title"
         android:summary="@string/raven_lockscreen_summary"/>
 
     <Preference
         android:fragment="com.android.settings.corvus.fragments.Battery"
         android:key="battery_fragment"
-        android:icon="@drawable/ic_raven_battery"
+        android:icon="@drawable/ic_dashboard_battery"
         android:title="@string/raven_battery_title"
         android:summary="@string/raven_battery_summary"/>
 
     <Preference
         android:fragment="com.android.settings.corvus.fragments.Notifications"
         android:key="notification_fragment"
-        android:icon="@drawable/ic_raven_notifications"
+        android:icon="@drawable/ic_dashboard_notification"
         android:title="@string/raven_notification_title"
         android:summary="@string/raven_notification_summary"/>
 
@@ -71,14 +71,14 @@
     <Preference
         android:fragment="com.android.settings.corvus.fragments.Buttons"
         android:key="button_fragment"
-        android:icon="@drawable/ic_raven_buttons"
+        android:icon="@drawable/ic_dashboard_buttons"
         android:title="@string/raven_buttons_title"
         android:summary="@string/raven_buttons_summary"/>
 
     <Preference
         android:fragment="com.android.settings.corvus.fragments.Misc"
         android:key="misc_fragment"
-        android:icon="@drawable/ic_raven_misc"
+        android:icon="@drawable/ic_dashboard_misc"
         android:title="@string/raven_misc_title"
         android:summary="@string/raven_misc_summary"/>
 

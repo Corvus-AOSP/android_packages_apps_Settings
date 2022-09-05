@@ -17,9 +17,12 @@
 package com.android.settings.corvus;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.provider.Settings;
 
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
@@ -103,6 +106,12 @@ public class CorvusSettings extends DashboardFragment implements
         setPreferenceLayout();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        setIconStyles();
+    }
+
     private void setPreferenceLayout() {
         final PreferenceScreen screen = getPreferenceScreen();
         final int count = screen.getPreferenceCount();
@@ -141,6 +150,87 @@ public class CorvusSettings extends DashboardFragment implements
                 }
             }
 	    }
+    }
+
+    private void setIconStyles() {
+        final PreferenceScreen screen = getPreferenceScreen();
+        final int count = screen.getPreferenceCount();
+        final int[] colorfulTint = getContext().getResources().getIntArray(R.array.dashboard_icon_colors);
+
+        int defValue = 0xff808080;
+
+        int[] colors = new int[] {
+                android.R.attr.colorControlNormal,
+                android.R.attr.colorAccent,
+                android.R.attr.textColorPrimaryInverse,
+                android.R.attr.colorBackgroundFloating
+        };
+
+        TypedArray ta = getContext().getTheme().obtainStyledAttributes(colors);
+        final int normalColor = ta.getColor(0, defValue);
+        final int accentColor = ta.getColor(1, defValue);
+        final int backgroundDark = ta.getColor(2, defValue);
+        final int background = ta.getColor(3, defValue);
+        ta.recycle();
+
+        int mDashboardIconStyle = Settings.System.getInt(getContext().getContentResolver(),
+                Settings.System.DASHBOARD_ICON_STYLES, 0);
+
+        for (int i = 0; i < count; i++) {
+            final Preference preference = screen.getPreference(i);
+            Drawable icon = preference.getIcon();
+            if (icon != null) {
+                if (icon instanceof LayerDrawable) {
+                    LayerDrawable lIcon = (LayerDrawable) icon;
+                    if(lIcon.getNumberOfLayers() == 2) {
+                        Drawable bg = lIcon.getDrawable(0);
+                        Drawable fg = lIcon.getDrawable(1);
+                        bg.setTintList(null);
+                        fg.setTintList(null);
+                        fg.setTint(0);
+                        bg.setTint(0);
+                        switch(mDashboardIconStyle) {
+                            case 0:
+                                fg.setTint(accentColor);
+                                break;
+                            case 1:
+                                fg.setTint(accentColor);
+                                bg.setTint(background);
+                                break;
+                            case 2:
+                                fg.setTint(accentColor);
+                                bg.setTint(backgroundDark);
+                                break;
+                            case 3:
+                                fg.setTint(normalColor);
+                                bg.setTint(accentColor);
+                                break;
+                            case 4:
+                                bg.setTint(accentColor);
+                                bg.setAlpha(50);
+                                fg.setTint(accentColor);
+                                break;
+                            case 5:
+                                fg.setTint(colorfulTint[i]);
+                                break;
+                            case 6:
+                                fg.setTint(colorfulTint[i]);
+                                bg.setTint(colorfulTint[i]);
+                                bg.setAlpha(50);
+                                break;
+                            case 7:
+                                fg.setTint(colorfulTint[i]);
+                                bg.setTint(backgroundDark);
+                                break;
+                            case 8:
+                                fg.setTint(normalColor);
+                                bg.setTint(colorfulTint[i]);
+                                break;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =

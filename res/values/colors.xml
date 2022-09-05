@@ -233,4 +233,18 @@
     <!-- Corvus logo colors -->
     <color name="corvus_logo_highlight">@*android:color/system_accent1_500</color>
     <color name="corvus_logo_undertone">@*android:color/system_accent1_800</color>
+
+    <!-- Corvus dashboard icon colors -->
+    <color name="bright_pink">#FF007F</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF7F00</color>
+    <color name="rust">#DB4437</color>
+    <color name="chartreuse">#7FFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="spring_green">#00FF7F</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="azure">#007FFF</color>
+    <color name="blue">#0000FF</color>
+    <color name="violet">#7F00FF</color>
+    <color name="magenta">#FF00FF</color>
 </resources>

@@ -94,6 +94,13 @@
             android:summary="@string/theme_customization_icon_shape_summary"
             android:fragment="com.android.settings.corvus.fragments.IconShapes"/>
 
+        <com.corvus.support.preferences.SystemSettingIntListPreference
+            android:key="dashboard_icon_styles"
+            android:title="@string/dashboard_icon_styles_title"
+            android:entries="@array/dashboard_icon_styles_entries"
+            android:entryValues="@array/dashboard_icon_styles_values"
+            android:defaultValue="0" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

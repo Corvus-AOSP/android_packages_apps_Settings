@@ -33,4 +33,8 @@
     <dimen name="ambient_light_preview_layout_width">150dp</dimen>
     <dimen name="ambient_light_preview_paddingHorizontal">50dp</dimen>
     <dimen name="ambient_light_preview_paddingVertical">30dp</dimen>
+
+    <!-- Dashboard icons -->
+    <dimen name="dashboard_icon_background_size">38dp</dimen>
+    <dimen name="dashboard_icon_size">24dp</dimen>
 </resources>
