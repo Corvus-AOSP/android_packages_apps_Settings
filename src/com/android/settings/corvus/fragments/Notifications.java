@@ -35,13 +35,17 @@ import com.android.settingslib.search.SearchIndexable;
 import com.corvus.support.preferences.SystemSettingSwitchPreference;
 import com.corvus.support.preferences.SystemSettingMasterSwitchPreference;
 
+import com.android.internal.util.corvus.CorvusUtils;
+
 @SearchIndexable
 public class Notifications extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_EDGE_LIGHTING = "pulse_ambient_light";
+    private static final String NEW_RETICKER = "new_reticker";
 
     private SystemSettingMasterSwitchPreference mEdgeLighting;
+    private SystemSettingSwitchPreference mNewReticker;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,6 +62,9 @@ public class Notifications extends SettingsPreferenceFragment
                 KEY_EDGE_LIGHTING, 0, UserHandle.USER_CURRENT) == 1;
         mEdgeLighting.setChecked(enabled);
         mEdgeLighting.setOnPreferenceChangeListener(this);
+
+        mNewReticker = (SystemSettingSwitchPreference) findPreference(NEW_RETICKER);
+        mNewReticker.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -67,6 +74,9 @@ public class Notifications extends SettingsPreferenceFragment
             boolean value = (Boolean) newValue;
             Settings.System.putIntForUser(resolver, KEY_EDGE_LIGHTING,
                     value ? 1 : 0, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference = mNewReticker) {
+            CorvusUtils.showSystemUiRestartDialog(getActivity());
             return true;
         }
         return false;
