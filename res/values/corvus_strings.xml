@@ -574,6 +574,7 @@
     <string name="reticker_colored_summary">Replace reTicker background color using notification app main color</string>
     <string name="new_reticker_title">New animated reTicker style</string>
     <string name="new_reticker_summary">A Re-designed Material design based dynamic island style animated notifications</string>
+    <string name="new_reticker_animation_title">OneUI style reticker animation</string>
 
     <!-- Statusbar icons -->
     <string name="statusbar_icons_category_title">Statusbar icons</string>
@@ -919,7 +920,7 @@
     <string name="battery_stat_cycle">Cycle</string>
 
     <!-- Doze on double tap -->
-    <string name="double_tap_title">Double tap</string>
+    <string name="double_tap_title">Double tap on doze</string>
     <string name="doze_double_tap_title">Double tap to check phone</string>
     <string name="doze_double_tap_summary">Pulse notifications by a double tap</string>
 </resources>
