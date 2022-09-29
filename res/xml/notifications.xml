@@ -47,6 +47,12 @@
 
     <com.corvus.support.preferences.SystemSettingSwitchPreference
         android:dependency="reticker_status"
+        android:key="new_reticker_animation"
+        android:title="@string/new_reticker_animation_title"
+        android:defaultValue="false" />
+
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:dependency="reticker_status"
         android:key="new_reticker"
         android:title="@string/new_reticker_title"
         android:summary="@string/new_reticker_summary"

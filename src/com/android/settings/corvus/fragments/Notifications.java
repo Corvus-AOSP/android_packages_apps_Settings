@@ -43,9 +43,10 @@ public class Notifications extends SettingsPreferenceFragment
 
     private static final String KEY_EDGE_LIGHTING = "pulse_ambient_light";
     private static final String NEW_RETICKER = "new_reticker";
+    private static final String NEW_RETICKER_ANIMATION = "new_reticker_animation";
 
     private SystemSettingMasterSwitchPreference mEdgeLighting;
-    private SystemSettingSwitchPreference mNewReticker;
+    private SystemSettingSwitchPreference mNewReticker, mNewRetickerAnimation;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,6 +66,8 @@ public class Notifications extends SettingsPreferenceFragment
 
         mNewReticker = (SystemSettingSwitchPreference) findPreference(NEW_RETICKER);
         mNewReticker.setOnPreferenceChangeListener(this);
+        mNewRetickerAnimation = (SystemSettingSwitchPreference) findPreference(NEW_RETICKER_ANIMATION);
+        mNewRetickerAnimation.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -75,7 +78,7 @@ public class Notifications extends SettingsPreferenceFragment
             Settings.System.putIntForUser(resolver, KEY_EDGE_LIGHTING,
                     value ? 1 : 0, UserHandle.USER_CURRENT);
             return true;
-        } else if (preference = mNewReticker) {
+        } else if (preference == mNewReticker || preference == mNewRetickerAnimation) {
             CorvusUtils.showSystemUiRestartDialog(getActivity());
             return true;
         }
