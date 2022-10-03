@@ -44,12 +44,6 @@
         android:title="@string/summary_placeholder"
         settings:controller="com.android.settings.fuelgauge.batterytip.BatteryTipPreferenceController" />
 
-    <SwitchPreference
-        android:key="power_usage_provider_google"
-        android:title="@string/powerusage_provider_google"
-	    android:summary="@string/power_usage_provider_summary"
-        settings:controller="com.android.settings.fuelgauge.GooglePowerUsageProviderPreferenceController" />
-
     <Preference
         android:fragment="com.android.settings.fuelgauge.PowerUsageAdvanced"
         android:key="battery_usage_summary"
