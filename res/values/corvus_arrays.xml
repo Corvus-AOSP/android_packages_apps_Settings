@@ -575,7 +575,6 @@
     <string-array name="dashboard_icon_styles_entries" translatable="false">
         <item>@string/dashboard_icon_default</item> 
         <item>@string/dashboard_icon_background</item> 
-        <item>@string/dashboard_icon_background_dark</item> 
         <item>@string/dashboard_icon_accent_background</item> 
         <item>@string/dashboard_icon_accent_twotone</item> 
         <item>@string/dashboard_icon_colorful</item> 
@@ -592,7 +591,6 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
-        <item>8</item>
     </string-array>
 
     <!-- Lots of colors -->

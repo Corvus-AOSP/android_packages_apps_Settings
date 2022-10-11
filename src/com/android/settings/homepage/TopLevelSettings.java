@@ -276,17 +276,15 @@ public class TopLevelSettings extends DashboardFragment implements
         int defValue = 0xff808080;
 
         int[] colors = new int[] {
-                android.R.attr.colorControlNormal,
-                android.R.attr.colorAccent,
                 android.R.attr.textColorPrimaryInverse,
+                android.R.attr.colorAccent,
                 android.R.attr.colorBackgroundFloating
         };
 
         TypedArray ta = getContext().getTheme().obtainStyledAttributes(colors);
         final int normalColor = ta.getColor(0, defValue);
         final int accentColor = ta.getColor(1, defValue);
-        final int backgroundDark = ta.getColor(2, defValue);
-        final int background = ta.getColor(3, defValue);
+        final int background = ta.getColor(2, defValue);
         ta.recycle();
 
         int mDashboardIconStyle = Settings.System.getInt(getContext().getContentResolver(),
@@ -314,31 +312,27 @@ public class TopLevelSettings extends DashboardFragment implements
                                 bg.setTint(background);
                                 break;
                             case 2:
-                                fg.setTint(accentColor);
-                                bg.setTint(backgroundDark);
-                                break;
-                            case 3:
                                 fg.setTint(normalColor);
                                 bg.setTint(accentColor);
                                 break;
-                            case 4:
+                            case 3:
                                 bg.setTint(accentColor);
                                 bg.setAlpha(50);
                                 fg.setTint(accentColor);
                                 break;
-                            case 5:
+                            case 4:
                                 fg.setTint(colorfulTint[i]);
                                 break;
-                            case 6:
+                            case 5:
                                 fg.setTint(colorfulTint[i]);
                                 bg.setTint(colorfulTint[i]);
                                 bg.setAlpha(50);
                                 break;
-                            case 7:
+                            case 6:
                                 fg.setTint(colorfulTint[i]);
-                                bg.setTint(backgroundDark);
+                                bg.setTint(background);
                                 break;
-                            case 8:
+                            case 7:
                                 fg.setTint(normalColor);
                                 bg.setTint(colorfulTint[i]);
                                 break;

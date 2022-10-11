@@ -898,7 +898,6 @@
     <string name="dashboard_icon_styles_title">Dashboard icon styles</string>
     <string name="dashboard_icon_default">Default</string>
     <string name="dashboard_icon_background">Icon with background</string>
-    <string name="dashboard_icon_background_dark">Icon with dark background</string>
     <string name="dashboard_icon_accent_background">Icon with accented background</string>
     <string name="dashboard_icon_accent_twotone">Icon with accent translucent background</string>
     <string name="dashboard_icon_colorful">Colorful icon only</string>
