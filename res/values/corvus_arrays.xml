@@ -361,6 +361,8 @@
         <item>@string/lock_screen_custom_clock_face_clockertino</item>
         <item>@string/lock_screen_custom_clock_face_spark</item>
         <item>@string/lock_screen_custom_clock_face_spark_circle</item>
+        <item>@string/lock_screen_custom_clock_face_analog</item>
+        <item>@string/lock_screen_custom_clock_face_bubble</item>
     </string-array>
     <string-array name="lock_screen_custom_clock_face_values" translatable="false">
         <item>com.android.keyguard.clock.DefaultClockController</item>
@@ -369,6 +371,8 @@
         <item>com.android.keyguard.clock.ClockertinoClockController</item>
         <item>com.android.keyguard.clock.SparkClockController</item>
         <item>com.android.keyguard.clock.SparkCircleClockController</item>
+        <item>com.android.keyguard.clock.AnalogClockController</item>
+        <item>com.android.keyguard.clock.BubbleClockController</item>
     </string-array>
 
     <!-- Pulse music visualizer -->
