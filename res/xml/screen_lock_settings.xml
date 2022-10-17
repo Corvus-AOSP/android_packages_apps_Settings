@@ -67,7 +67,7 @@
         android:summaryOn="@string/fingerprint_wake_unlock_touch"
         android:summaryOff="@string/fingerprint_wake_unlock_press" />
 
-    <SwitchPreference
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
         android:key="fingerprint_vibration"
         android:title="@string/fprint_vib_title"
         android:summary="@string/fprint_vib_summary"
